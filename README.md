@@ -1,0 +1,99 @@
+# Telco Customer Churn Prediction using ANN
+
+An end-to-end machine learning and deep learning project that predicts customer churn using an **Artificial Neural Network (ANN)** built with **Keras** (configured with the **PyTorch** backend).
+
+---
+
+## 📋 Table of Contents
+1. [Overview](#-overview)
+2. [Project Structure](#-project-structure)
+3. [Model Architecture](#%EF%B8%8F-model-architecture)
+4. [Installation & Setup](#-installation--setup)
+5. [Workflow & Notebooks](#-workflow--notebooks)
+6. [Results & Evaluation](#-results--evaluation)
+7. [Visualizations](#-visualizations)
+
+---
+
+## 🔍 Overview
+Predicting customer churn is a critical problem for telecommunications companies. This project takes raw customer records and processes them through an entire data science pipeline: loading, cleaning, exploratory analysis, preprocessing, building an Artificial Neural Network, and evaluating its performance.
+
+We employ **Keras 3** with a **PyTorch backend** to train a deep learning classifier that decides whether a user is likely to churn.
+
+---
+
+## 📁 Project Structure
+The repository is structured as follows:
+
+| Directory/File | Description |
+| :--- | :--- |
+| `data/` | Contains the raw data (`Telco_customer_churn.xlsx`), intermediate cleaned data, and the final scaled preprocessed files. |
+| `images/` | Holds all plots extracted from the notebooks, such as heatmaps, distributions, and evaluation curves. |
+| `notebooks/` | Contains the 5 sequential notebooks representing the pipeline phases. |
+| `model_history.json` | JSON containing validation/training loss and accuracy logs across epochs. |
+| `telco_ann_model.keras` | The serialized, trained deep learning model in Keras format. |
+| `requirements.txt` | Complete python dependencies for the project. |
+
+---
+
+## ⚙️ Model Architecture
+The neural network model is defined in `notebooks/04_ANN_Model.ipynb`:
+* **Input Layer**: Takes the preprocessed and encoded feature dimensions.
+* **Hidden Layers**: Fully connected (`Dense`) layers with `ReLU` activations.
+* **Regularization**: `Dropout` layers to prevent overfitting.
+* **Output Layer**: Single node with `Sigmoid` activation outputting churn probability.
+
+---
+
+## 🚀 Installation & Setup
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/rupamkgp/telco-customer-churn-prediction_ANN.git
+   cd telco-customer-churn-prediction_ANN
+   ```
+
+2. **Create and Activate a Virtual Environment**:
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate  # On macOS/Linux
+   # or .venv\Scripts\activate on Windows
+   ```
+
+3. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+---
+
+## 🔄 Workflow & Notebooks
+
+To reproduce the results, run the notebooks in the following order:
+
+1. **[01_Data_Loading_and_cleaning.ipynb](notebooks/01_Data_Loading_and_cleaning.ipynb)**  
+   Loads the dataset, checks for missing data, handles null values, and outputs the cleaned dataset.
+2. **[02_EDA.ipynb](notebooks/02_EDA.ipynb)**  
+   Performs Exploratory Data Analysis, exploring demographic, account, and service trends against churn.
+3. **[03_Preprocessing.ipynb](notebooks/03_Preprocessing.ipynb)**  
+   Converts categorical features via encoding, scales continuous features, and saves the datasets.
+4. **[04_ANN_Model.ipynb](notebooks/04_ANN_Model.ipynb)**  
+   Builds, compiles, and fits the Artificial Neural Network model using the PyTorch-backed Keras engine.
+5. **[05_Model_Evaluation.ipynb](notebooks/05_Model_Evaluation.ipynb)**  
+   Evaluates the model's metrics, confusion matrix, ROC curve, and saves accuracy/loss history plots.
+
+---
+
+## 📈 Results & Evaluation
+* **Training Accuracy**: ~80%
+* **Validation Accuracy**: ~80%
+* Training logs and curves showing accuracy and loss convergence are saved in `model_history.json` and visualized under `images/`.
+
+---
+
+## 📊 Visualizations
+Here are some of the key plots generated during the project workflow:
+* **Missing Value Visualization**: Inspects data completeness.
+* **Churn Distributions**: Highlighting customer churn dynamics.
+* **Correlation Heatmap**: Inspecting relationships between numerical features.
+* **Evaluation Curves**: Loss/Accuracy graphs, Confusion Matrices, and ROC curves showing model performance.
