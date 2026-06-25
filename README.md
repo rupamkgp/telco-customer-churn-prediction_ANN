@@ -22,18 +22,34 @@ We employ **Keras 3** with a **PyTorch backend** to train a deep learning classi
 
 ---
 
+
 ##  Project Structure
-The repository is structured as follows:
 
-| Directory/File | Description |
-| :--- | :--- |
-| `data/` | Contains the raw data (`Telco_customer_churn.xlsx`), intermediate cleaned data, and the final scaled preprocessed files. |
-| `images/` | Holds all plots extracted from the notebooks, such as heatmaps, distributions, and evaluation curves. |
-| `notebooks/` | Contains the 5 sequential notebooks representing the pipeline phases. |
-| `model_history.json` | JSON containing validation/training loss and accuracy logs across epochs. |
-| `telco_ann_model.keras` | The serialized, trained deep learning model in Keras format. |
-| `requirements.txt` | Complete python dependencies for the project. |
-
+```text
+telco-customer-churn-prediction_ANN/
+│
+├── .venv/
+│
+├── data/
+│   ├── telco_cleaned.xlsx
+│   ├── Telco_customer_churn.xlsx
+│   └── telco_preprocessed.xlsx
+│
+├── images/
+│
+├── notebooks/
+│   ├── 01_Data_Loading_and_Cleaning.ipynb
+│   ├── 02_EDA.ipynb
+│   ├── 03_Preprocessing.ipynb
+│   ├── 04_ANN_Model.ipynb
+│   └── 05_Model_Evaluation.ipynb
+│
+├── .gitignore
+├── model_history.json
+├── README.md
+├── requirements.txt
+└── telco_ann_model.keras
+```
 ---
 
 ##  Model Architecture
