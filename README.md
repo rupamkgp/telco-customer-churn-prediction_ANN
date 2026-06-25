@@ -53,6 +53,26 @@ telco-customer-churn-prediction_ANN/
 ---
 
 ##  Model Architecture
+---
+##  Project Workflow
+
+```mermaid
+graph TD
+    A[Telco Customer Churn Dataset] --> B[Data Loading & Cleaning]
+    B --> C[Exploratory Data Analysis]
+    C --> D[Data Preprocessing]
+    D --> E[Feature Engineering<br/>One-Hot Encoding]
+    E --> F[Train-Test Split]
+    F --> G[Feature Scaling]
+    G --> H[ANN Model Building]
+    H --> I[Model Training]
+    I --> J[Model Evaluation]
+    J --> K[Confusion Matrix]
+    J --> L[Precision, Recall, F1-Score]
+    I --> M[Training History]
+    H --> N[Save Trained Model]
+```
+---
 ##  Neural Network Architecture
 
 ```mermaid
