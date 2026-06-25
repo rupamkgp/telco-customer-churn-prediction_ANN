@@ -1,0 +1,31 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Data & Models
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+models/*
+!models/.gitkeep
+
+# Reports & Metrics
+reports/figures/*
+!reports/figures/.gitkeep
+reports/metrics/*
+!reports/metrics/.gitkeep
+
+# IDEs & System files
+.DS_Store
+.idea/
+.vscode/
+.ipynb_checkpoints/
+.streamlit/
